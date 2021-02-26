@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    .btn-group{
+        position: relative;
+        width: 30%;
+        height: 30%;
+    }
+    .up-key{
+        position: absolute;
+        width: 32%;
+        height: 40%;
+        left: 50%;
+        top: 0%;
+        transform: translate(-50%, 0);
+    }
+    .right-key{
+        position:  absolute;
+        width: 32%;
+        height: 40%;
+        right: 0%;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+    .left-key{
+        position:  absolute;
+        width: 32%;
+        height: 40%;
+        left:  0%;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+    .down-key{
+        position:  absolute;
+        width: 32%;
+        height: 40%;
+        left: 50%;
+        bottom: 0%;
+        transform: translate(-50%, 0);
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>Snake</title>
+</head>
+<body>
+    <script>let direction = 'right';</script>
+    <canvas id="myCanvas" style="border: 2px solid #000000"></canvas>
+    <div id = "groupButton" class="btn-group" >
+        <input class="up-key" type="button" onclick="handler({code: 'ArrowUp'})" value="UP">
+        <input class="left-key" type="button" onclick="handler({code: 'ArrowLeft'})" value="LEFT">
+        <input class="right-key" type="button" onclick="handler({code: 'ArrowRight'})" value="RIGHT">
+        <input class="down-key" type="button" onclick="handler({code: 'ArrowDown'})" value="DOWN">
+    </div>
+    <script src="Snake.js"></script>
+</body>
+</html>
